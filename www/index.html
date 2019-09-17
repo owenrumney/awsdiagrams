@@ -6,6 +6,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142787328-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142787328-1');
+</script>
 	<script type="text/javascript">
 		// Parses URL parameters. Supported parameters are:
 		// - lang=xy: Specifies the language of the user interface.
@@ -54,9 +63,26 @@
 	<script type="text/javascript" src="js/Menus.js"></script>
 	<script type="text/javascript" src="js/Toolbar.js"></script>
 	<script type="text/javascript" src="js/Dialogs.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+
 </head>
-<body class="geEditor">
-<div class="geEditor"></div>
+<body>
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">awsdiagrams.io</a>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<div id="navbar" class="navbar-right">
+			<span class='navbar-text'>Created by <a href="https://www.owenrumney.co.uk">Owen Rumney</a> </span> <span class='navbar-text' id='last_updated'></span>
+
+		</div>
+	</div>
+</nav>
+<div id="editor-ui-container" style="position:absolute;top:45px;height:100%;width:100%;"class="geEditor" ></div>
 	<script type="text/javascript">
 		// Extends EditorUi to update I/O action states based on availability of backend
 		(function()
@@ -100,7 +126,8 @@
 				themes[Graph.prototype.defaultThemeName] = xhr[1].getDocumentElement(); 
 				
 				// Main
-				new EditorUi(new Editor(urlParams['chrome'] == '0', themes));
+				var container = document.getElementById('editor-ui-container')
+				new EditorUi(new Editor(urlParams['chrome'] == '0', themes), container);
 			}, function()
 			{
 				document.body.innerHTML = '<center style="margin-top:10%;">Error loading resource files. Please check browser console.</center>';
