@@ -68,21 +68,16 @@
 
 
 </head>
-<body>
-<nav class="navbar navbar-dark bg-primary navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">awsdiagrams.io</a>
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-		<div id="navbar" class="navbar-right">
-			<span class='navbar-text'>Created by <a href="https://www.owenrumney.co.uk">Owen Rumney</a> </span> <span class='navbar-text' id='last_updated'></span>
 
-		</div>
-	</div>
-</nav>
-<div id="editor-ui-container" style="position:absolute;top:45px;height:100%;width:100%;"class="geEditor" ></div>
+<body >
+<div class="navbar">
+	<span class="navbar-title">AWS Diagrams</span>
+	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<span class="navbar-created">Created by  <a href="https://www.owenrumney.co.uk">Owen Rumney</a> </span> <span class='navbar-text' id='last_updated'></span>
+</div>
+<div id="editor-ui-container"  class="geEditor" style="position:absolute;top:40px;height:95%;width:100%;"></div>
+
 	<script type="text/javascript">
 		// Extends EditorUi to update I/O action states based on availability of backend
 		(function()
