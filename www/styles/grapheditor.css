@@ -740,3 +740,45 @@ html td.mxWindowTitle {
  	color:rgb(112, 112, 112);
  	padding:4px;
 }
+
+.navbar {
+	background: #FF9900;
+	color: white;
+	padding: 5px;
+}
+
+.navbar-title {
+	display: inline-block;
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	line-height: inherit;
+	white-space: nowrap;
+}
+
+.navbar-created {
+	float: right;
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+	margin-right: 1rem;
+	font-size: 1rem;
+	line-height: inherit;
+	white-space: nowrap;
+}
+
+.navbar-created a {
+	text-decoration: none;
+	color: white;
+}
+
+
+.navbar-created a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+body {
+	font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	margin: 0px;
+}
